@@ -15,5 +15,8 @@ func main() {
     b, _ := strconv.ParseUint(hexCode[4:6], 16, 0)
 
     ansiEscape := fmt.Sprintf(`\033[38;2;%d;%d;%dm`, r, g, b)
+    fmt.Printf(" (RGB) R: %d", r)
+    fmt.Printf(" (RGB) G: %d", g)
+    fmt.Printf(" (RGB) B: %d", b)
     fmt.Printf("Hex code #%s translates to ANSI escape code %s\n", hexCode, ansiEscape)
 }
